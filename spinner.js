@@ -5,7 +5,7 @@ const setSpinner = (time, interval) => {
     if (new Date().getTime() < end) {
       setTimeout(() => {
         spin(interval, frames, (i + 1) % frames.length);
-        process.stdout.write(`\r${frames[i]}`);
+        process.stdout.write(`\r${frames[i]} `);
       }, interval);
     } else {
       setTimeout(() => process.stdout.write('\n'), interval);
